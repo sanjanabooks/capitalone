@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bikeshare Data Analysis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link href="carousel.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Bikeshare Data Analysis</h1>
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+  		<div class="p-3 mb-2 bg-primary text-white">
+      <h3>Most Popular Stations</h3>
+      <p>Starting ID = {{ start }}</p>
+      <p>Ending ID = {{ end }}</p>
+  		</div>
+    </div>
+    <div class="col-sm-4">
+    	<div class="p-3 mb-2 bg-info text-white">
+      <h3>Average Distance Traveled</h3>
+      <p>{{ distance }}</p>
+      <p>(based on starting and ending latitude and longitude, and applying the Haversine formula) </p>
+  </div>
+    </div>
+    <div class="col-sm-4">
+    	<div class="p-3 mb-2 bg-success text-white">
+      <h3>Regular Commuters</h3>        
+      <p>There are {{ regular }} regular passengers, determined by Round Trip and Monthly Pass usage, and {{ nonregular }} non-regular passengers.</p>
+  </div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-4">
+      <h3>Duration (min) of Bikeshares</h3>
+      <div><img src='{{ graph1 }}'></img></div>
+</div>
+</div>
+
+	<div class="row">
+    <div class="col-sm-4">
+      <h3>Passholder Type</h3>
+      <div><img src='{{ graph2 }}'></img></div>
+    </div>
+</div>
+
+	    <div class="row">
+    <div class="col-sm-4">
+      <h3>Distance (km) of Bikeshares </h3>
+      <div><img src='{{ graph3 }}'></img></div>
+    </div>
+    <div>
+
+  </div>
+
+</div>
+
+
+</body>
+</html>
